@@ -1,0 +1,336 @@
+<!--
+    FILE HEADER
+    Purpose: Structure for the natural burial webpage.
+    Authors: Ricky McIntyre (Leader)
+             Dhruba
+             Daniel Johnston
+             Himshree
+             Shahil 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Natural Burial</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="example 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link tag for external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- External CSS stylesheet for styling -->
+
+    <!-- Adds Tailwind Play CDN script -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS framework -->
+
+    <!-- Update Tailwind config file -->
+    <script src="./tailwind.js"></script> <!-- Tailwind configuration -->
+
+    <!-- Script tags for additional scripts if any -->
+    <script src="app.js"></script> <!-- Custom JavaScript -->
+
+</head>
+
+<body id="body" class="">
+
+    <!-- MAJOR SECTION: Main Title -->
+    <div class="relative">
+        <!-- Background image -->
+        <img src="./images/burial.jpg" alt="Bural Site" class="w-full">
+
+        <!-- Title -->
+        <h1 id="title" class="absolute top-1/4 left-0 right-0 flex justify-center items-center text-8xl">
+            <span class="text-white">Natural Burial</span>
+        </h1>
+    </div>
+
+    <!-- Light / Dark Button -->
+    <button id="light-dark-button" class="text-black bg-yellow-100
+                dark:text-yellow-100 dark:bg-black" onclick="lightDarkMode()">
+        Dark Mode
+    </button> <!-- Button to toggle dark mode -->
+
+    <main>
+        <form>
+            <!-- MAJOR SECTION: Personal Information -->
+            <div id="flex-col">
+
+                <!-- Name -->
+                <section class="form-group bg-green-300 dark:bg-green-900 text-black dark:text-yellow-100">
+
+                    <header><span>Personal Information</span></header>
+                    <audio id="myAudio" preload="auto"></audio>
+
+                    <label for="name" class="inline-block mr-2">Full name:</label>
+                    <input type="text" id="name" data-sound="audio/name.mp3" name="name" required
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black">
+
+                </section>
+
+                <!-- Birthday -->
+                <section class="form-group
+                                bg-green-300 dark:bg-green-900
+                                text-black dark:text-yellow-100">
+
+                    <label for="birthday" class="inline-block mr-2">Date of birth:</label>
+                    <input type="text" id="birthday" data-sound="audio/dob.mp3" name="birthday"
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black">
+
+                </section>
+
+                <!-- Gender -->
+                <section class="form-group
+                                bg-green-300 dark:bg-green-900
+                                text-black dark:text-yellow-100">
+
+
+                    <label for="gender">Gender identity:</label>
+                    <br>
+                    <input type="radio" name="gender" data-sound="audio/female.mp3"
+                        class="w-10 h-10 border-gray-300 focus:ring-blue-500" value="female" id="female">
+                    <label for="female">Female</label>
+                    <br>
+
+                    <input type="radio" name="gender" data-sound="audio/male.mp3"
+                        class="w-10 h-10  border-gray-300 focus:ring-blue-500" value="male" id="male">
+                    <label for="male">Male</label>
+                    <br>
+
+                    <input type="radio" name="gender" data-sound="audio/nb.mp3"
+                        class="w-10 h-10 border-gray-300 focus:ring-blue-500" value="non-binary" id="non-binary">
+                    <label for="non-binary">Non-binary</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="gender" data-sound="audio/other.mp3"
+                        class="w-10 h-10 border-gray-300 focus:ring-blue-500" value="other" id="otherRadioButton">
+                    <label for="otherRadioButton" class="inline-block mr-2">Other</label>
+                    <input type="text" id="otherInput" name="other"
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black"
+                        style="display: none;"> <!-- Text input for other gender, initially hidden -->
+                </section>
+
+                <!-- Email -->
+                <section class="form-group
+                bg-green-300 dark:bg-green-900
+                text-black dark:text-yellow-100">
+
+                    <label for="email" class="inline-block mr-2">E-mail:</label>
+
+                    <input type="email" id="email" data-sound="audio/email.mp3" name="email" required
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black">
+
+                </section>
+
+                <!-- Address -->
+                <section class="form-group
+                                bg-green-300 dark:bg-green-900
+                                text-black dark:text-yellow-100">
+
+                    <label for="address" class="inline-block mr-2">Address:</label>
+
+                    <input type="text" id="address" data-sound="audio/adress.mp3" name="address" required
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black">
+
+                </section>
+
+                <!-- MAJOR SECTION: Marker Options -->
+                <section class="marker-options
+                                bg-blue-300 dark:bg-blue-900
+                                text-black dark:text-yellow-100">
+
+                    <header><span>Marker Options</span></header>
+
+                    <label for="woodenPlaque">Choose a grave marker option:</label>
+                    <br>
+                    <div class="top-row">
+                        <div class="top">
+                            <input type="radio" name="option1" data-sound="audio/stone_p.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" value="stonePlaque"
+                                id="stonePlaque">
+                            <label for="stonePlaque">Stone Plaque</label>
+                            <img src="./images/markeroptions/stone.jpg" alt="Stone Plaque" width="600" height="400">
+                        </div>
+
+                        <div class="top">
+
+                            <input type="radio" name="option1" data-sound="audio/wooden_p.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" value="woodenPlaque"
+                                id="woodenPlaque">
+                            <label for="woodenPlaque">Wooden Plaque</label>
+                            <img src="./images/markeroptions/wooden.jpg" alt="Wooden Plaque" width="600" height="400">
+                        </div>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="bottom">
+
+                            <input type="radio" name="option1" data-sound="audio/en_rock.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" value="engravedRock"
+                                id="engravedRock">
+                            <label for="engravedRock">Engraved Rock</label>
+                            <img src="./images/markeroptions/rock.jpg" alt="Engraved Rock" width="600" height="400">
+                        </div>
+
+                        <div class="bottom">
+
+                            <input type="radio" name="option1" data-sound="audio/en_tree.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" value="engravedTree"
+                                id="engravedTree">
+                            <label for="engravedTree">Engraved Tree</label>
+                            <img src="./images/markeroptions/tree.jpg" alt="Engraved Tree" width="600" height="400">
+                        </div>
+                    </div>
+
+                    <input type="radio" name="option1" data-sound="audio/other.mp3"
+                        class="w-10 h-10 border-gray-300 focus:ring-blue-500" value="other" id="otherBurialRadioButton">
+                    <label for="otherBurialRadioButton" class="inline-block mr-2">Other Burial Option</label>
+                    <input type="text" id="otherBurialInput" name="otherBurial"
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black"
+                        style="display: none;"> <!-- Initially hidden -->
+                </section>
+
+                <!-- MAJOR SECTION: Burial Methods -->
+                <section class="burial-methods
+                                    bg-red-300 dark:bg-red-900
+                                    text-black dark:text-yellow-100">
+
+                    <header><span>Burial Methods</span></header>
+
+                    <label for="burial-methods-choice">How would you like the final resting arrangements to be
+                        handled?</label>
+                    <br>
+                    <div class="top-row">
+                        <div class="top">
+                            <input type="radio" name="option2" value="seaBurial" data-sound="audio/sea_b.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" id="seaBurial">
+                            <label for="seaBurial">Sea Burial</label>
+                            <img src="./images/burial methods/ocean.jpg" alt="Sea Burial" width="600" height="400">
+                        </div>
+
+                        <div class="top">
+                            <input type="radio" name="option2" value="greenBurial" data-sound="audio/green_b.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" id="greenBurial">
+                            <label for="greenBurial">Green Burial</label>
+                            <img src="./images/burial methods/green burial.jpg" alt="Green Burial" width="600"
+                                height="400">
+                        </div>
+                    </div>
+
+                    <div class="bottom-row">
+                        <div class="bottom">
+                            <input type="radio" name="option2" value="woodlandBurial" data-sound="audio/woodland_b.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500" id="woodlandBurial">
+                            <label for="woodlandBurial">Woodland Burial</label>
+                            <img src="./images/burial methods/woodland burial.jpg" alt="Woodland Burial" width="600"
+                                height="400">
+                        </div>
+
+                        <div class="bottom">
+                            <input type="radio" name="option2" value="coralreefburial" data-sound="audio/crb.mp3"
+                                class="w-10 h-10 text-blue-500 border-gray-300 focus:ring-blue-500"
+                                id="coralreefburial">
+                            <label for="coralreefburial">Coral Reef burial</label>
+                            <img src="./images/burial methods/Coral Reef burial.jpg" alt="Coral Reef burial" width="600"
+                                height="400">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MAJOR SECTION: Grave Location -->
+                <section class="grave-location
+                                    bg-blue-300 dark:bg-blue-900
+                                    text-black dark:text-yellow-100">
+
+                    <header><span>Grave Locations</span></header>
+
+                    <label for="location" class="inline-block mr-2">Where would you like to be buried?</label><br>
+                    <input type="text" id="location" data-sound="audio/loc.mp3" name="location" required
+                        class="inline-block w-1000 h-24 px-4 py-2 text-6xl rounded-lg border-gray-300 dark:bg-black"
+                        placeholder="Ex. By the Rocks, Lake, etc">
+
+
+                </section>
+
+                <!-- MAJOR SECTION: Number of Burials -->
+                <section class="number-of-burials
+                                    bg-green-300 dark:bg-green-900
+                                    text-black dark:text-yellow-100">
+
+                    <header><span>Number of Burials</span></header>
+
+                    <label for="number-of-places" class="block mb-2">Number of places to be reserved:</label><br>
+                    <input type="number" id="number-of-places" data-sound="audio/ins.mp3" name="number-of-places"
+                        required min="1"
+                        class="w-56 h-24 px-4 py-2 
+                    rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 text-5xl dark:bg-black">
+
+                </section>
+
+                <!-- MAJOR SECTION: Inscription -->
+                <section class="inscription
+                                    bg-red-300 dark:bg-red-900
+                                    text-black dark:text-yellow-100">
+
+                    <header><span>Inscription</span></header>
+
+                    <!-- Label for the inscription input field -->
+                    <label for="inscryption">If you wish to inscribe something on the grave marker (if possible):
+                    </label><br>
+                    <!-- Textarea input field for inscription -->
+                    <textarea id="inscryption" name="inscryption" cols="40" rows="8"
+                        class="rounded-lg border-gray-300 px-4 py-2 text-6xl dark:bg-black"
+                        placeholder="Write your thoughts here..."></textarea>
+
+                </section>
+
+                <!-- Buttons -->
+                <section id="flex-row" class="bg-green-300 dark:bg-green-900">
+
+                    <!-- Submit button -->
+                    <button id="submit" type="submit" class="inline-block px-4 py-2 
+                                                     bg-blue-300 dark:bg-blue-900
+                                                     hover:bg-gray-800 dark:hover:bg-gray-200
+                                                     hover:text-white dark:hover:text-black
+                                                     text-black dark:text-yellow-100
+                                                     rounded-lg shadow-md transform transition 
+                                                     duration-300 ease-in-out mt-4">
+                        Submit
+                    </button>
+
+                    <!-- Upload Button -->
+                    <button id="upload" type="submit" class="inline-block px-4 py-2 
+                                                     bg-blue-300 dark:bg-blue-900
+                                                     hover:bg-gray-800 dark:hover:bg-gray-200
+                                                     hover:text-white dark:hover:text-black
+                                                     text-black dark:text-yellow-100
+                                                     rounded-lg shadow-md transform transition 
+                                                     duration-300 ease-in-out mt-4">
+                        Upload
+                    </button>
+
+                    <!-- Download Button -->
+                    <button id="download" type="submit" class="inline-block px-4 py-2 
+                                                     bg-blue-300 dark:bg-blue-900
+                                                     hover:bg-gray-800 dark:hover:bg-gray-200
+                                                     hover:text-white dark:hover:text-black
+                                                     text-black dark:text-yellow-100
+                                                     rounded-lg shadow-md transform transition 
+                                                     duration-300 ease-in-out mt-4">
+                        Download
+                    </button>
+
+                </section>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-black bg-green-300 dark:text-yellow-100 dark:bg-green-900">
+        <p>
+            &copy; 2024 Natural Burial<br>
+            Designed by The Big Group
+        </p>
+    </footer>
+
+</body>
+
+</html>

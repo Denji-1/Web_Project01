@@ -32,11 +32,11 @@ Natural Burial Form is implemented using HTML, CSS, and JavaScript. The program 
 **HTML Structure**
 The program's HTML structure consists of a section element containing the marker options along with their corresponding radio buttons and image representations. Additionally, an input field is provided for entering a custom burial method if needed.
 
-**CSS Styling**
+**CSS Styling:**
 CSS styling is applied to enhance the visual appearance of the program and ensure optimal presentation of marker options and images.
 
-**JavaScript Functionality**
+**JavaScript Functionality:**
 JavaScript functions are used to handle user interactions, such as selecting marker options and displaying/hiding the input field for custom burial methods dynamically.
 
-**Dependencies**
+**Dependencies:**
 The Grave Marker Options Selection Program does not have any external dependencies and can be run on any modern web browser without additional installations
